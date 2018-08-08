@@ -7,26 +7,21 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
         Scanner input = new Scanner(System.in);
-        int previous;
-        int next;
-
-
-        while (true) {
-            System.out.println("Enter number:");
-            boolean validNumber = input.hasNextInt();
-            int number = input.nextInt();
-            if (validNumber) {
-                previous = number;
-                if (previous < number) {
-                    System.out.println("Minimum is equal to " + previous);
-                    System.out.println("Maximum is equal to " + number);
-                } else {
-                    System.out.println("Minimum is equal to " + number);
-                    System.out.println("Maximum is equal to " + previous);
-                }
+        System.out.println("Enter Initial number:");
+        boolean validNumber = input.hasNextInt();
+        while (validNumber) {
+            int firstNumber = input.nextInt();
+            input.nextLine();
+            System.out.println("Enter number");
+            validNumber = input.hasNextInt();
+            int secondNumber = input.nextInt();
+            input.nextLine();
+            if (firstNumber > secondNumber) {
+                System.out.println("Maximum is " + firstNumber);
             } else {
-                break;
+                System.out.println("Maximum is " + secondNumber);
             }
+            input.nextLine();
         }
         input.close();
     }
