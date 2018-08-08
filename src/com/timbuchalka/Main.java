@@ -27,9 +27,9 @@ public class Main {
 
 // *********************************************** TIMS CODE ********************************************
         Scanner scanner = new Scanner(System.in);
-        int min =  2147483647;
-        int max = -2147483648;
-        boolean first = true;
+        int min = Integer.MAX_VALUE; //max value constant
+        int max = Integer.MIN_VALUE; //min value constant
+        //boolean first = true;
 
         while (true) {
             System.out.println("Enter number: ");
