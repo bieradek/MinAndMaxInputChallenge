@@ -27,8 +27,8 @@ public class Main {
 
 // *********************************************** TIMS CODE ********************************************
         Scanner scanner = new Scanner(System.in);
-        int min = 0;
-        int max = 0;
+        int min =  2147483647;
+        int max = -2147483648;
         boolean first = true;
 
         while (true) {
@@ -36,12 +36,12 @@ public class Main {
             boolean validNumber = scanner.hasNextInt();
             if (validNumber) {
                 int number = scanner.nextInt();
-                if (first) {
-                    first = false;
-                    min = number;
-                    max = number;
-                }
-                //after first iteration the code below won't be executed
+//                if (first) {
+//                    first = false;
+//                    min = number;
+//                    max = number;
+//                }
+//                //after first iteration the code below won't be executed
                 if (number > max) {
                     max = number;
                 }
